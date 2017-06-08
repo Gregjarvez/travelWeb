@@ -1,0 +1,1 @@
+const gulp = require("gulp");const sass = require("gulp-sass");const browserSync = require("browser-sync").create();gulp.task('default', ['server'], function(){    gulp.watch("./app/assets/scss/**/*.scss", ['sass']);    gulp.watch('./app/*.html').on("change", browserSync.reload);});

@@ -1,0 +1,1 @@
+const gulp = require("gulp");const sass = require("gulp-sass");const browserSync = require("browser-sync").create();gulp.task('server', ['sass'], function () {    browserSync.init(["./app/assets/css/*.css", "./app/assets/js/**/*.js"], {        server: {            baseDir: "./app"        }    });});

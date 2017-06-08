@@ -363,8 +363,16 @@ img {
   max-width: 100%;
   height: auto; }
 
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  color: #d59541; }
+
 .large-hero {
-  position: relative; }
+  position: relative;
+  border-bottom: 10px solid #2f5572; }
   .large-hero__text-content {
     position: absolute;
     top: 50%;
@@ -375,16 +383,161 @@ img {
   .large-hero__title {
     font-weight: 300;
     color: #2f5572;
-    font-size: 4.8rem;
+    font-size: 2.4rem;
     margin: 0; }
+    @media (min-width: 530px) {
+      .large-hero__title {
+        font-size: 3rem; } }
+    @media (min-width: 800px) {
+      .large-hero__title {
+        font-size: 4.8rem; } }
   .large-hero__subtitle {
     font-weight: 300;
     color: #2f5572;
-    font-size: 2.9rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
     margin: 0; }
+    @media (min-width: 530px) {
+      .large-hero__subtitle {
+        font-size: 1.8rem; } }
+    @media (min-width: 800px) {
+      .large-hero__subtitle {
+        font-size: 2rem; } }
+    @media (min-width: 1200px) {
+      .large-hero__subtitle {
+        font-size: 2.5rem; } }
   .large-hero__description {
-    font-weight: 200;
-    font-size: 1.87rem;
+    min-width: 40rem;
+    font-weight: 100;
+    font-size: 1.1rem;
     color: #FFF;
     text-transform: capitalize;
-    letter-spacing: 1px; }
+    letter-spacing: 2px; }
+    @media (min-width: 530px) {
+      .large-hero__description {
+        font-size: 1.4rem; } }
+    @media (min-width: 800px) {
+      .large-hero__description {
+        font-size: 1.875rem; } }
+  .large-hero__image {
+    display: block; }
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1.2rem;
+  background: #2f5572;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  letter-spacing: 1px; }
+  .btn__orange {
+    background: #d59541; }
+  .btn__large {
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 1.1rem 1.9rem; }
+    @media (min-width: 530px) {
+      .btn__large {
+        font-size: 1.25rem; } }
+
+.headline {
+  color: #2f5572;
+  font-size: 1.875em;
+  font-weight: 200;
+  text-transform: capitalize; }
+  @media (min-width: 530px) {
+    .headline {
+      font-size: 2.875rem; } }
+  .headline__centered {
+    text-align: center; }
+  .headline__orange {
+    color: #d59541; }
+  .headline__small {
+    font-size: 1.5rem; }
+    @media (min-width: 530px) {
+      .headline__small {
+        font-size: 1.875rem; } }
+  .headline__narrow {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+  .headline__light {
+    font-weight: 200; }
+  .headline__margin-b-small {
+    margin-top: 0.5em; }
+  .headline__margin-b-large {
+    margin-bottom: 1.6em; }
+  .headline__small-no-t-margin {
+    margin-top: 0px; }
+
+.wrapper {
+  padding-right: 18px;
+  padding-left: 18px;
+  max-width: 1236px;
+  margin: 0 auto; }
+  .wrapper .wrapper {
+    padding-right: 0;
+    padding-left: 0; }
+  .wrapper__medium {
+    max-width: 976px; }
+  .wrapper__b-margin {
+    margin-bottom: 1rem; }
+    @media (min-width: 530px) {
+      .wrapper__b-margin {
+        margin-bottom: 2.875rem; } }
+
+.page-section {
+  padding: 1.2rem 0; }
+  @media (min-width: 530px) {
+    .page-section {
+      padding: 4.5rem 0; } }
+  .page-section__blue {
+    background: #2f5572;
+    color: #FFFFFF; }
+
+.image__grow {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; }
+
+.generic-container p {
+  line-height: 1.65;
+  font-size: 1.125rem; }
+
+.generic-container p a {
+  font-weight: 400;
+  text-decoration: underline; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 800px) {
+    .row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .row__gutters > div {
+    padding-right: 0; }
+    @media (min-width: 800px) {
+      .row__gutters > div {
+        padding-right: 65px; } }
+    .row__gutters > div:last-child {
+      padding-right: 0; }
+
+.col__small {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%; }
+
+.col__large {
+  -ms-flex-preferred-size: 66.66%;
+      flex-basis: 66.66%; }
+
+.col__margin-bottom {
+  margin-bottom: 1.2rem; }
