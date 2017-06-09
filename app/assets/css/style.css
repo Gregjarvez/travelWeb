@@ -367,7 +367,7 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-a {
+a, a:active, a:link {
   color: #d59541; }
 
 .large-hero {
@@ -501,14 +501,6 @@ a {
   display: block;
   margin: 0 auto; }
 
-.generic-container p {
-  line-height: 1.65;
-  font-size: 1.125rem; }
-
-.generic-container p a {
-  font-weight: 400;
-  text-decoration: underline; }
-
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -541,3 +533,16 @@ a {
 
 .col__margin-bottom {
   margin-bottom: 1.2rem; }
+
+.generic-container p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  margin: 1.8rem 0;
+  color: #666; }
+  @media (min-width: 530px) {
+    .generic-container p {
+      font-size: 1.125rem; } }
+
+.generic-container p a {
+  font-weight: 400;
+  text-decoration: underline; }
