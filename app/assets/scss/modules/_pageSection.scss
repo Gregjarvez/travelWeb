@@ -1,0 +1,1 @@
+.page-section {  padding: 1.2rem 0;  @include atSmall {    padding: 3.5rem 0;  }  &__blue {    background: $mainBlue;    color: #FFFFFF;  }    &--testimonials{    background: url("/assets/images/testimonials-bg.jpg") no-repeat top center;    background-size: cover;  }}
