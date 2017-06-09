@@ -1,1 +1,1 @@
-.generic-container {  p {    font-size: 0.875rem;    line-height: 1.65;    margin: 1.8rem 0;    color: #666;    @include atSmall{      font-size: 1.125rem;    }  }  p a {    font-weight: 400;    text-decoration: underline;  }}
+.generic-container {  p {    font-size: 0.875rem;      font-weight: 300;    line-height: 1.65;    margin: 0 0 1.8rem 0;    @include atSmall{      font-size: 1.125rem;    }  }  p a {    font-weight: 400;  }}

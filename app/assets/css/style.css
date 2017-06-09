@@ -522,6 +522,13 @@ a, a:active, a:link {
         padding-right: 65px; } }
     .row__gutters > div:last-child {
       padding-right: 0; }
+  .row__gutters-large > div {
+    padding-right: 0; }
+    @media (min-width: 530px) {
+      .row__gutters-large > div {
+        padding-right: 100px; } }
+    .row__gutters-large > div:last-child {
+      padding-right: 0; }
 
 .col__small {
   -ms-flex-preferred-size: 33.33%;
@@ -534,15 +541,70 @@ a, a:active, a:link {
 .col__margin-bottom {
   margin-bottom: 1.2rem; }
 
+.col__even {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
+
 .generic-container p {
   font-size: 0.875rem;
+  font-weight: 300;
   line-height: 1.65;
-  margin: 1.8rem 0;
-  color: #666; }
+  margin: 0 0 1.8rem 0; }
   @media (min-width: 530px) {
     .generic-container p {
       font-size: 1.125rem; } }
 
 .generic-container p a {
-  font-weight: 400;
-  text-decoration: underline; }
+  font-weight: 400; }
+
+.features__title {
+  font-size: 2.75rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+  text-align: center; }
+  @media (min-width: 530px) {
+    .features__title {
+      font-size: 3.75rem; } }
+  .features__title strong {
+    font-weight: 500; }
+
+.features__image-margin {
+  margin: 0 auto;
+  margin-bottom: .5em;
+  display: block; }
+  @media (min-width: 530px) {
+    .features__image-margin {
+      margin-right: 1rem;
+      margin-left: 0;
+      margin-bottom: 0;
+      display: inline-block; } }
+
+.features__image-margin-large {
+  margin-right: 1rem; }
+
+.features__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 1.4em; }
+  .features__block--textBlock h3 {
+    margin: 0;
+    margin-bottom: .4em;
+    padding: 0;
+    font-size: 1.875rem;
+    font-weight: 100; }
+  .features__block--textBlock p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #bcd3e4;
+    font-weight: 200; }
