@@ -521,7 +521,7 @@ a, a:active, a:link {
   text-transform: capitalize;
   letter-spacing: 1px; }
   .btn__orange {
-    color: white;
+    color: #FFF;
     background: #d59541; }
   .btn__large {
     font-weight: 300;
@@ -838,8 +838,8 @@ a, a:active, a:link {
     @media (min-width: 800px) {
       .site-nav__logo {
         left: 0%;
-        -webkit-transform: translate(0%, 0) scale(1);
-                transform: translate(0%, 0) scale(1); } }
+        -webkit-transform: translate(0%, -10px) scale(1);
+                transform: translate(0%, -10px) scale(1); } }
   .site-nav__menu-icon {
     width: 25px;
     height: 2px;
