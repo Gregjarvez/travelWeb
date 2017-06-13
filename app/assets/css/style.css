@@ -457,6 +457,18 @@ a, a:active, a:link {
   height: 42px;
   background-position: 36.69752421959096% 45.792307692307695%; }
 
+.hide-initially {
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out; }
+
+.featuresAreVisible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+
 .large-hero {
   position: relative;
   border-bottom: 10px solid #2f5572; }
@@ -780,8 +792,11 @@ a, a:active, a:link {
     background: rgba(47, 85, 114, 0.55); }
   @media (min-width: 800px) {
     .site-nav {
+      position: fixed;
       background: rgba(47, 85, 114, 0.3);
       padding: .4rem; } }
+  .site-nav__isdarker {
+    background-color: rgba(47, 85, 114, 0.95); }
   .site-nav__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -893,16 +908,25 @@ a, a:active, a:link {
   .site-nav__logo {
     position: absolute;
     left: 50%;
+    background-color: #2f5572;
+    margin: 0;
+    padding: 25px 36px;
     -webkit-transform: translate(-50%, -10px) scale(0.8);
             transform: translate(-50%, -10px) scale(0.8);
-    background-color: #2f5572;
-    padding: 25px 36px;
-    margin: 0; }
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.71, -0.23, 0.29, 1.26);
+    transition: -webkit-transform 0.6s cubic-bezier(0.71, -0.23, 0.29, 1.26);
+    transition: transform 0.6s cubic-bezier(0.71, -0.23, 0.29, 1.26);
+    transition: transform 0.6s cubic-bezier(0.71, -0.23, 0.29, 1.26), -webkit-transform 0.6s cubic-bezier(0.71, -0.23, 0.29, 1.26); }
     @media (min-width: 800px) {
       .site-nav__logo {
         left: 0%;
         -webkit-transform: translate(0%, -10px) scale(1);
-                transform: translate(0%, -10px) scale(1); } }
+                transform: translate(0%, -10px) scale(1); }
+        .site-nav__isdarker .site-nav__logo {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+          -webkit-transform-origin: 0 0;
+                  transform-origin: 0 0; } }
   .site-nav__menu-icon {
     padding: 1rem;
     position: absolute;
@@ -960,14 +984,5 @@ a, a:active, a:link {
   -webkit-transform: translateY(0.3px) rotate(-45deg) scaleX(1.505);
           transform: translateY(0.3px) rotate(-45deg) scaleX(1.505); }
 
-.hide-initially {
-  opacity: 0;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out; }
-
-.featuresAreVisible {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1); }
+.isCurrentActive {
+  color: #d59541 !important; }
