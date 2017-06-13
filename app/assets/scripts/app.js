@@ -1,1 +1,1 @@
-import MobileNav from './modules/MobileNav';
+import MobileNav from './modules/MobileNav';const mobileToggle = new MobileNav();mobileToggle.events();
