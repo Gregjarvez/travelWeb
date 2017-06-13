@@ -718,7 +718,7 @@ a, a:active, a:link {
     margin-top: 5rem; }
     @media (min-width: 530px) {
       .testimonial__block {
-        margin-top: 2rem;
+        margin-top: 4rem;
         font-size: 1.2rem; } }
   .testimonial__image {
     width: 160px;
@@ -747,7 +747,6 @@ a, a:active, a:link {
 
 .sitefooter {
   background: #2f5572;
-  margin-top: 1rem;
   padding: 1rem 0;
   color: white; }
   @media (min-width: 530px) {
@@ -886,8 +885,7 @@ a, a:active, a:link {
       padding: .5rem;
       border: 1px solid rgba(255, 255, 255, 0.5); }
       .site-nav__links li a:hover {
-        color: #d59541;
-        background-color: rgba(47, 85, 114, 0.7); }
+        color: #d59541; }
       @media (min-width: 800px) {
         .site-nav__links li a {
           padding: 0;
@@ -961,3 +959,15 @@ a, a:active, a:link {
 .site-nav__menu-icon.hamburger span:nth-child(3) {
   -webkit-transform: translateY(0.3px) rotate(-45deg) scaleX(1.505);
           transform: translateY(0.3px) rotate(-45deg) scaleX(1.505); }
+
+.hide-initially {
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out; }
+
+.featuresAreVisible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1); }

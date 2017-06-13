@@ -1,1 +1,1 @@
-import MobileNav from './modules/MobileNav';const mobileToggle = new MobileNav();mobileToggle.events();
+import $ from "jquery";import MobileNav from './modules/MobileNav';import RevealOnScroll from "./modules/waypoint";new MobileNav();new RevealOnScroll($(".features__block"), "85%");new RevealOnScroll($(".testimonial__block"), "60%");
