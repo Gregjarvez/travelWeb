@@ -11176,7 +11176,7 @@ var StickyHeader = function () {
     this.triggerElement = (0, _jquery2.default)('.large-hero__title');
     this.pageSections = (0, _jquery2.default)(".page-section");
     this.links = (0, _jquery2.default)(".link");
-    this.offSet = null;
+    this.offset = "18%";
     this.revealHeader();
     this.currentPageSection();
     this.addsmoothScrolling();
@@ -11207,12 +11207,6 @@ var StickyHeader = function () {
       });
     }
   }, {
-    key: "setoffSet",
-    value: function setoffSet(dir) {
-      if (dir === "down") return this.offSet = "18%";
-      if (dir === "up") return this.offset = "-40%";
-    }
-  }, {
     key: "currentPageSection",
     value: function currentPageSection() {
       var that = this;
@@ -11221,13 +11215,25 @@ var StickyHeader = function () {
         new Waypoint({
           element: currentSection,
           handler: function handler(direction) {
-            var matchinglinkId = currentSection.getAttribute('data-link');
-            that.setoffSet(direction);
-            console.log(that.offSet);
-            that.links.removeClass("isCurrentActive");
-            (0, _jquery2.default)(matchinglinkId).addClass("isCurrentActive");
+            if (direction === "down") {
+              var matchinglinkId = currentSection.getAttribute('data-link');
+              that.links.removeClass("isCurrentActive");
+              (0, _jquery2.default)(matchinglinkId).addClass("isCurrentActive");
+            }
           },
-          offSet: that.offSet
+          offset: "18%"
+        });
+
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction === "up") {
+              var matchinglinkId = currentSection.getAttribute('data-link');
+              that.links.removeClass("isCurrentActive");
+              (0, _jquery2.default)(matchinglinkId).addClass("isCurrentActive");
+            }
+          },
+          offset: "40%"
         });
       });
     }

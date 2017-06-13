@@ -897,8 +897,7 @@ a, a:active, a:link {
       letter-spacing: .4px;
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
-      padding: .5rem;
-      border: 1px solid rgba(255, 255, 255, 0.5); }
+      padding-right: 2px; }
       .site-nav__links li a:hover {
         color: #d59541; }
       @media (min-width: 800px) {
