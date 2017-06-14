@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="/temp/scripts/vendor.js"></script>
     <title>Clear View Escapes</title>
     <meta name="keywords" content="Travel planning, travel bundles, travel escapes">
     <meta name="description"
@@ -41,8 +42,8 @@
                 media="(min-width: 990px)">
         <source srcset="assets/images/hero--small.jpg 990w, assets/images/hero-small-hi-dpi.jpg 1980w"
                 media="(min-width: 640px)">
-        <img srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w"
-             alt="costal view" class="large-hero__image">
+        <img  srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w"
+             alt="costal view" class="large-hero__image ">
     </picture>
     <div class="wrapper">
         <div class="large-hero__text-content">
@@ -61,21 +62,19 @@
         <h3 class="headline headline__centered headline__orange headline__small headline__narrow headline__light headline__margin-b-small">
             Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
         <div class="wrapper wrapper__medium  wrapper__b-margin">
-            <img sizes="(min-width: 970px) 967w, 100vw"
-                 srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w"
-                 alt="Couple walking down a street.">
+            <img class="lazyload" sizes="(min-width: 970px) 967w, 100vw"  data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
         </div>
         <div class="row row__gutters">
             <div class="col__small col__margin-bottom">
                 <picture>
-                    <source sizes="404px"
-                            srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w, "
+                    <source class="lazyload" sizes="404px"
+                            data-srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w, "
                             media="(min-width: 1020px)">
-                    <source sizes="320px"
-                            srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi 764w.jpg "
+                    <source class="lazyload" sizes="320px"
+                            data-srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi 764w.jpg "
                             media="(min-width: 800px)">
-                    <img class="image__grow image__short"
-                         srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w"
+                    <img  class="image__grow image__short lazyload"
+                         data-srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w"
                          alt="Our founder, Jane Doe">
                 </picture>
             </div>
@@ -185,13 +184,13 @@
     </div>
 </div>
 
-<div id="testimonials" class="page-section testimonial" data-link="#testimonial-link">
+<div id="testimonials" class="page-section lazyload testimonial" data-link="#testimonial-link">
     <div class="wrapper">
         <h2 class="page-section__title page-section__title-blue">
             <span class="features__image-margin icons icons--comment"></span>Real <strong>Testimonials</strong></h2>
         <div class="row">
             <div class="testimonial__block generic-container col__small testimonial__margin-right">
-                <img class="testimonial__image" src="assets/images/testimonial-jane.jpg">
+                <img class="testimonial__image lazyload" data-src="assets/images/testimonial-jane.jpg">
                 <h3 class="testimonial__title">Jane Doe</h3>
                 <h3 class="testimonial__subtitle">9 Time Escaper</h3>
                 <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -206,7 +205,7 @@
 
             </div>
             <div class="testimonial__block generic-container col__small testimonial__margin-right">
-                <img class='testimonial__image' src="assets/images/testimonial-john.jpg">
+                <img class='testimonial__image lazyload' data-src="assets/images/testimonial-john.jpg">
                 <h3 class="testimonial__title">John Smith</h3>
                 <h3 class="testimonial__subtitle">4 Time Escaper</h3>
                 <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -218,7 +217,7 @@
             </div>
 
             <div class="testimonial__block generic-container col__small testimonial__margin-right">
-                <img class='testimonial__image' src="assets/images/testimonial-cat.jpg">
+                <img class='testimonial__image lazyload' data-src="assets/images/testimonial-cat.jpg">
                 <h3 class="testimonial__title">Cat McKitty</h3>
                 <h3 class="testimonial__subtitle">6 Time Escaper</h3>
                 <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -256,6 +255,6 @@
     <div class="modal__close">X</div>
 </div>
 
-<script src="/temp/scripts/bundle.js"></script>
+<script src="/temp/scripts/App.js"></script>
 </body>
 </html>
