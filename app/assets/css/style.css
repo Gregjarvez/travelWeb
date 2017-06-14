@@ -357,7 +357,10 @@ th {
   padding: 0; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
 
 img {
   max-width: 100%;
@@ -985,3 +988,76 @@ a, a:active, a:link {
 
 .isCurrentActive {
   color: #d59541 !important; }
+
+.modal {
+  position: fixed;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.94);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .modal__centered {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .modal__margin-b-small {
+    margin-top: 0;
+    margin-bottom: 1.3rem; }
+  .modal__description {
+    text-align: center;
+    margin: 0 auto 1.3rem auto;
+    max-width: 430px; }
+  .modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #2f5572;
+    font-weight: 700;
+    font-size: 2rem;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .modal__close:hover {
+      color: #d59541;
+      text-shadow: 2px 2px rgba(47, 85, 114, 0.4); }
+  .modal__isopened {
+    visibility: visible;
+    opacity: 1; }
+
+.social-icons {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 2rem; }
+  .social-icons__icon {
+    height: 72px;
+    width: 72px;
+    position: relative;
+    background: #d59541;
+    margin-right: 2rem; }
+    .social-icons__icon .icon {
+      display: table;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }

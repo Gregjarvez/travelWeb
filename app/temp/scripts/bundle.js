@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11156,11 +11156,74 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.modalButton = (0, _jquery2.default)(".open-modal");
+    this.modalOverlay = (0, _jquery2.default)('.modal');
+    this.closeIcon = (0, _jquery2.default)('.modal__close');
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      var that = this;
+      this.modalButton.click(this.revealModal.bind(this));
+      this.closeIcon.click(this.closeOverlay.bind(this));
+      (0, _jquery2.default)(document).keyup(function (e) {
+        if (e.keyCode === 27) {
+          var close = that.closeOverlay.bind(that);
+          close();
+          return !1;
+        }
+      });
+    }
+  }, {
+    key: "revealModal",
+    value: function revealModal(e) {
+      e.preventDefault();
+      this.modalOverlay.addClass("modal__isopened");
+    }
+  }, {
+    key: "closeOverlay",
+    value: function closeOverlay() {
+      this.modalOverlay.removeClass("modal__isopened");
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(6);
+var _jquerySmoothScroll = __webpack_require__(7);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11233,7 +11296,7 @@ var StickyHeader = function () {
               (0, _jquery2.default)(matchinglinkId).addClass("isCurrentActive");
             }
           },
-          offset: "40%"
+          offset: "-40%"
         });
       });
     }
@@ -11245,7 +11308,7 @@ var StickyHeader = function () {
 exports.default = StickyHeader;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11307,7 +11370,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11321,13 +11384,17 @@ var _MobileNav = __webpack_require__(2);
 
 var _MobileNav2 = _interopRequireDefault(_MobileNav);
 
-var _waypoint = __webpack_require__(4);
+var _waypoint = __webpack_require__(5);
 
 var _waypoint2 = _interopRequireDefault(_waypoint);
 
-var _stickyHeader = __webpack_require__(3);
+var _stickyHeader = __webpack_require__(4);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
+
+var _modal = __webpack_require__(3);
+
+var _modal2 = _interopRequireDefault(_modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11338,10 +11405,11 @@ window.onload = function () {
   new _waypoint2.default((0, _jquery2.default)(".features__block"), "85%");
   new _waypoint2.default((0, _jquery2.default)(".testimonial__block"), "60%");
   var stickyHeader = new _stickyHeader2.default();
+  var modal = new _modal2.default();
 }();
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
