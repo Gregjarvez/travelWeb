@@ -11250,7 +11250,7 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: "refreshWayPoints",
     value: function refreshWayPoints() {
-      this.lazyLoad.load(Waypoint.refreshAll());
+      this.lazyLoad.on("load", Waypoint.refreshAll());
     }
   }, {
     key: "target",
