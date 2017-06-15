@@ -536,7 +536,7 @@ a, a:active, a:link {
   text-transform: capitalize;
   letter-spacing: 1px; }
   .btn__orange {
-    color: #FFF;
+    color: #FFF !important;
     background: #d59541; }
   .btn__large {
     font-weight: 300;
