@@ -398,7 +398,7 @@ a, a:active, a:link {
     color: #FFFFFF; }
 
 .icons {
-  background-image: url("/assets/images/sprites/sprites-69f19c2e.svg"); }
+  background-image: url("../../assets/images/sprites/sprites-69f19c2e.svg"); }
 
 .icons--clear-view-escapes {
   width: 142.4px;
