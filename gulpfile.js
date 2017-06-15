@@ -1,1 +1,1 @@
-require("./gulp/tasks/sassfile");require("./gulp/tasks/serverfile");require("./gulp/tasks/watch");require("./gulp/tasks/sprite");require("./gulp/tasks/scripts");
+require("./gulp/tasks/sassfile");require("./gulp/tasks/serverfile");require("./gulp/tasks/watch");require("./gulp/tasks/sprite");require("./gulp/tasks/scripts");require("./gulp/tasks/build");
