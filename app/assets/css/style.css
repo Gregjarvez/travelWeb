@@ -532,7 +532,7 @@ a, a:active, a:link {
   font-weight: 300;
   text-decoration: none;
   text-align: center;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-transform: capitalize;
   letter-spacing: 1px; }
   .btn__orange {
